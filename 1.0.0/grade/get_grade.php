@@ -6,6 +6,6 @@ function get_grade(string $iin) {
   global $db;
 
   // Запрос на получение
-  return $db->query("SELECT `g_grade`, `g_task_id`, `g_date` FROM `Grades` WHERE `g_user_iin` = '$iin'")->fetch_all(MYSQLI_ASSOC);
+  return $db->query("SELECT `g_grade`, `g_task_id`, `g_date`, `g_time` FROM `Grades` WHERE `g_user_iin` = '$iin'")->fetch_all(MYSQLI_ASSOC);
   
 }

@@ -14,7 +14,8 @@ class user extends model {
                 "list" => [],
                 "photo" => []
             ],
-            "upload-picture" => []
+            "upload-picture" => [],
+            "block" => []
         ];
     }
 
@@ -120,7 +121,6 @@ public function execute(): void {
                         json_response(getAllUser());
                         break; 
                     case $routes[4]:
-                        include "get.php";
                         getPhoto($_POST["img"]);
                         break;  
                 }
@@ -131,6 +131,10 @@ public function execute(): void {
                     $token = $_POST["token"];
                     upload_profile_picture($token, $file);
                     break;
+                case $routes[5]:
+                  include "remove_user.php";
+                  remove_user();
+                  break;
         }
         return;
     }

@@ -1,5 +1,4 @@
 <?php
-
 include "model.php";
 include "./database.php";
 
@@ -11,7 +10,8 @@ $class_names = [
     "specialization" => "specialization",
     "teacher" => "teacher",
     "module" => "module",
-    "grade" => "grade"
+    "grade" => "grade",
+    "file" => "file"
 ];
 
 $router = array_splice($router, 1);

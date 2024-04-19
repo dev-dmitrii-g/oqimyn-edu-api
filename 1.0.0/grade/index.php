@@ -66,10 +66,9 @@ public function execute(): void {
                 break;
             case $routes[3]:
                 include "get_grade.php"; // Получить оценку
-                json_response(get_grade($iin["user_iin"]));
+                json_response(get_grade($iin["user_iin"]);
                 break;
-            
-            // TODO: Сделать функцию для средней оценки
+
             case $routes[4]:
                 include "average_grade.php"; // Среднее значение
                 average_grade();
